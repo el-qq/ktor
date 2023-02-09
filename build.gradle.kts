@@ -79,15 +79,6 @@ extra["nonDefaultProjectStructure"] = mutableListOf(
     "ktor-java-modules-test"
 )
 
-val disabledExplicitApiModeProjects = listOf(
-    "ktor-client-tests",
-    "ktor-client-json-tests",
-    "ktor-server-test-host",
-    "ktor-server-test-suites",
-    "ktor-server-tests",
-    "ktor-client-content-negotiation-tests",
-)
-
 apply(from = "gradle/compatibility.gradle")
 
 plugins {
@@ -124,7 +115,6 @@ allprojects {
     }
 
     kotlin {
-        if (!disabledExplicitApiModeProjects.contains(project.name)) explicitApi()
 
         setCompilationOptions()
         configureSourceSets()
