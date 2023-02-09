@@ -2,7 +2,6 @@ apply plugin: 'binary-compatibility-validator'
 
 apiValidation {
     def excludeList = [
-        'ktor-serialization-kotlinx-tests',
     ].toSet()
 
 
